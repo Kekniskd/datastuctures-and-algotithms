@@ -36,7 +36,7 @@ class LinkedList:
         return count
 
 
-    def add(self, data):
+    def add(self, data) -> None:
         """
         Adds a new Node containing data at head of the list
         Takes O(1)
@@ -46,7 +46,7 @@ class LinkedList:
         self.head = new_node
 
 
-    def search(self, key):
+    def search(self, key: int) -> Node:
         """
         Search for the first node containing data that matches the key
         Return the node or 'None' if not found
@@ -63,7 +63,7 @@ class LinkedList:
         return None
 
 
-    def insert(self, data, index):
+    def insert(self, data, index: int) -> None:
         """
         Inserts a new node containing data at index position
         Insertion takes O(1) time but finding the node at the insertion point takes O(n) time
@@ -89,6 +89,30 @@ class LinkedList:
             new.next_node = next_node
 
 
+    def remove(self, key: int) -> None:
+        """
+        Removes node containing data that matches the key
+        Returns the node or None if key doesn't exist
+        Takes O(n) time
+        """
+        current = self.head
+        previous = None
+        found = False
+
+        while current and not found:
+            if current.data == key and current is self.head:
+                found = True
+                self.head = current.next_node
+            elif current.data == key:
+                found = True
+                previous.next_node = current.next_node
+            else:
+                previous = current
+                current = current.next_node
+
+        return current
+
+
     def __repr__(self) -> str:
         """
         Return a string representation of the list
@@ -107,13 +131,3 @@ class LinkedList:
             
             current = current.next_node
         return ' -> '.join(nodes)
-
-
-l = LinkedList()
-l.add(1)
-l.add(2)
-l.add(3)
-l.add(4)
-l.add(5)
-l.insert(6, 2)
-print(l)
