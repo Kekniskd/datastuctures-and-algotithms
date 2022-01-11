@@ -1,6 +1,6 @@
 def linear_search(list: list, target: int) -> int:
     """
-    Returns the index position of target if found, else returns None
+    Returns the index position of target if found, else returns None through Linear-search algorithm
     """
     for index, item in enumerate(list):
         print(f"{index}: {item}")
