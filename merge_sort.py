@@ -48,3 +48,25 @@ def merge(left: list, right:list) -> list:
     while i < len(left):
         l.append(left[i])
         i += 1
+
+    while j < len(right):
+        l.append(right[j])
+        j += 1
+
+    return l
+
+
+def verify(list: list) -> bool:
+    n = len(list)
+
+    if n == 0 or n == 1:
+        return True
+
+    return list[0] < list[1] and verify(list[1:])
+
+
+li = [4,5,8,9,1,6,7]
+new_li = merge_sort(li)
+
+print(verify(li))
+print(verify(new_li))
