@@ -2,6 +2,8 @@ def merge_sort(list: list) -> None:
     """
     Sorts a list in ascending order
     Returns a new sorted list
+
+    Takes O(n log n) time 
     """
 
     if len(list) <= 1:
@@ -18,6 +20,8 @@ def split(list: list) -> list:
     """
     Divides the unsorted list at midpoint into sublists
     Returns two sublists - left and right
+
+    Takes overall O(log n) time
     """
 
     mid = len(list)//2
@@ -31,6 +35,8 @@ def merge(left: list, right:list) -> list:
     """
     Merges two lists (arrays), sorting them in the process
     Returns a new merged list
+
+    Takes overall O(n) time
     """
 
     l = []
@@ -65,8 +71,8 @@ def verify(list: list) -> bool:
     return list[0] < list[1] and verify(list[1:])
 
 
-li = [4,5,8,9,1,6,7]
+li = [100,4,55,8,9,1,6,7,54,84,76,12,48,64,34,38]
 new_li = merge_sort(li)
-
+print(new_li)
 print(verify(li))
 print(verify(new_li))
