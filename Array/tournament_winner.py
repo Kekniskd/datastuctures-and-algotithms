@@ -61,6 +61,20 @@ class TestProgram(unittest.TestCase):
         actual = tournamentWinner(competitions, results)
         self.assertEqual(actual, expected)
 
+    def test_case_2(self):
+        competitions = [
+            ["HTML", "Java"],
+            ["Java", "Python"],
+            ["Python", "HTML"],
+            ["C#", "Python"],
+            ["Java", "C#"],
+            ["C#", "HTML"]
+        ]
+        results = [0, 1, 1, 1, 0, 1]
+        expected = "C#"
+        actual = tournamentWinner(competitions, results)
+        self.assertEqual(actual, expected)
+
 
 if __name__ == '__main__':
     test_case_1_obj = TestProgram()
