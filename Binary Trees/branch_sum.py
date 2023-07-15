@@ -27,7 +27,7 @@ from typing import Optional, Union, Any
 
 
 class BinaryTreeBase:
-    def __init__(self, value):
+    def __init__(self, value: int):
         self.value = value
         self.left = None
         self.right = None
@@ -57,7 +57,7 @@ class TestProgram(unittest.TestCase):
 
 
 class BinaryTree(BinaryTreeBase):
-    def insert(self, values, i=0):
+    def insert(self, values: list, i: int = 0):
         if i >= len(values):
             return
         queue = [self]
