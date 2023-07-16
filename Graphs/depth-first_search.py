@@ -32,14 +32,9 @@ class Node:
         return self
 
     def depthFirstSearch(self, array: list):
-
-        if not self.children:
-            return
-        else:
-            array.append(self.name)
-            for child in self.children:
-                self.depthFirstSearch(child)
-
+        array.append(self.name)
+        for child in self.children:
+            child.depthFirstSearch(array)
         return array
 
 
