@@ -19,3 +19,23 @@
 #
 # Sample Output
 # 17
+import unittest
+
+
+def minimumWaitingTime(queries: list) -> int:
+    # Write your code here.
+    queries.sort()
+    min_time = 0
+    for idx, query in enumerate(queries):
+        query_left = len(queries) - (idx + 1)
+        min_time += query * query_left
+
+    return min_time
+
+
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        queries = [3, 2, 1, 2, 6]
+        expected = 17
+        actual = minimumWaitingTime(queries)
+        self.assertEqual(actual, expected)
