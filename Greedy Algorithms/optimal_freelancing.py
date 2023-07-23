@@ -17,13 +17,32 @@
 import unittest
 
 
-def optimalFreelancing(jobs: list) -> int:
-    return -1
+def optimalFreelancing(jobs):
+    LENGTH_OF_WEEK = 7
+    profit = 0
+    jobs.sort(key=lambda job: job["payment"], reverse=True)
+    timeline = [False] * LENGTH_OF_WEEK
+    for job in jobs:
+        maxTime = min((job["deadline"], LENGTH_OF_WEEK))
+        for time in reversed(range(maxTime)):
+            if not timeline[time]:
+                timeline[time] = True
+                profit += job["payment"]
+                break
+    return profit
 
 
 class TestProgram(unittest.TestCase):
     def test_case_1(self):
-        input = [{"deadline": 1, "payment": 1}]
-        expected = 1
+        input = [
+            {"deadline": 2, "payment": 1},
+            {"deadline": 2, "payment": 2},
+            {"deadline": 2, "payment": 3},
+            {"deadline": 2, "payment": 4},
+            {"deadline": 2, "payment": 5},
+            {"deadline": 2, "payment": 6},
+            {"deadline": 2, "payment": 7}
+        ]
+        expected = 13
         actual = optimalFreelancing(input)
         self.assertEqual(actual, expected)
