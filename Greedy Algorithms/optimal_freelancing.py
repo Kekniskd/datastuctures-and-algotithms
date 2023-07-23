@@ -46,3 +46,9 @@ class TestProgram(unittest.TestCase):
         expected = 13
         actual = optimalFreelancing(input)
         self.assertEqual(actual, expected)
+
+    def test_case_2(self):
+        input = [{"deadline": 1, "payment": 1}]
+        expected = 1
+        actual = optimalFreelancing(input)
+        self.assertEqual(actual, expected)
