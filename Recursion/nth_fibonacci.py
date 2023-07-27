@@ -38,7 +38,6 @@ def getNthFib_iter(n):
         fib[0] = fib[1]
         fib[1] = next_fib
         curr += 1
-
     return fib[1] if n > 1 else fib[0]
 
 
