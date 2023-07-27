@@ -21,7 +21,7 @@ import unittest
 chache = {1: 0, 2: 1}
 
 
-def getNthFib(n):
+def getNthFib(n: int) -> int:
     if n in chache:
         return chache[n]
     else:
@@ -30,7 +30,7 @@ def getNthFib(n):
         return nth_fib
 
 
-def getNthFib_iter(n):
+def getNthFib_iter(n: int) -> int:
     fib = [0, 1]
     curr = 3
     while curr <= n:
