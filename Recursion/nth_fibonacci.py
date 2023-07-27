@@ -48,3 +48,9 @@ class TestProgram(unittest.TestCase):
 
     def test_case_2(self):
         self.assertEqual(getNthFib_iter(15), 377)
+
+    def test_case_3(self):
+        self.assertEqual(getNthFib_iter(7), 8)
+
+    def test_case_4(self):
+        self.assertEqual(getNthFib_iter(7), 8)
