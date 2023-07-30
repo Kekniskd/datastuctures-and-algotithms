@@ -42,3 +42,9 @@ class TestProgram(unittest.TestCase):
             findThreeLargestNumbers([141, 1, 17, -7, -17, -27, 18, 541, 8, 7, 7]),
             [18, 141, 541],
         )
+
+    def test_case_2(self):
+        self.assertEqual(
+            findThreeLargestNumbers([2, 1, 0]),
+            [0, 1, 2],
+        )
