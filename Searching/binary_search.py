@@ -37,3 +37,6 @@ class TestProgram(unittest.TestCase):
 
     def test_case_2(self):
         self.assertEqual(binarySearch([0, 1, 21, 33, 45, 45, 61, 71, 72, 73], 1), 1)
+
+    def test_case_3(self):
+        self.assertEqual(binarySearch([0, 1, 21, 33, 45, 55, 61, 71, 72, 73], 55), 5)
