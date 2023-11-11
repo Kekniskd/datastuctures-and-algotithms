@@ -37,7 +37,7 @@ def generateDocument(characters: str, document: str) -> bool:
 
 class TestProgram(unittest.TestCase):
     def test_case_1(self):
-        characters = "Bste!hetsi ogEAxpelrt x "
+        characters = "bBste!hetsi ogEAxpelrt x "
         document = "AlgoExpert is the Best!"
         expected = True
         actual = generateDocument(characters, document)
