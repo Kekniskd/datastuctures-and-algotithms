@@ -23,9 +23,26 @@ def firstNonRepeatingCharacter(string: str) -> int:
     return -1
 
 
+def firstNonRepeatingCharacter2(string):
+    characterFrequencies = {}
+    for character in string:
+        characterFrequencies[character] = characterFrequencies.get(character, 0) + 1
+    for idx in range(len(string)):
+        character = string[idx]
+        if characterFrequencies[character] == 1:
+            return idx
+    return -1
+
+
 class TestProgram(unittest.TestCase):
     def test_case_1(self):
         input = "abcdcaf"
         expected = 1
         actual = firstNonRepeatingCharacter(input)
+        self.assertEqual(actual, expected)
+
+    def test_case_2(self):
+        input = "abcdcaf"
+        expected = 1
+        actual = firstNonRepeatingCharacter2(input)
         self.assertEqual(actual, expected)
