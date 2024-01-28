@@ -23,7 +23,7 @@ def firstNonRepeatingCharacter(string: str) -> int:
     return -1
 
 
-def firstNonRepeatingCharacter2(string):
+def firstNonRepeatingCharacter2(string: str) -> int:
     characterFrequencies = {}
     for character in string:
         characterFrequencies[character] = characterFrequencies.get(character, 0) + 1
