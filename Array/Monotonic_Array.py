@@ -21,9 +21,10 @@ def isMonotonic(array: list) -> bool:
     for i in range(1, len(array)):
         if array[i] < array[i - 1]:
             isNonDecreasing = False
+            break
         if array[i] > array[i - 1]:
             isNonIncreasing = False
-
+            break
     return isNonDecreasing or isNonIncreasing
 
 
