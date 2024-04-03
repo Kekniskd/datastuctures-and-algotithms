@@ -20,7 +20,7 @@ import unittest
 def optimalFreelancing(jobs):
     LENGTH_OF_WEEK = 7
     profit = 0
-    jobs.sort(key=lambda job: job["payment"], reverse=True)
+    jobs.sort(key=lambda item: item["payment"], reverse=True)
     timeline = [False] * LENGTH_OF_WEEK
     for job in jobs:
         maxTime = min((job["deadline"], LENGTH_OF_WEEK))
