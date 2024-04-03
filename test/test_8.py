@@ -89,3 +89,4 @@ li = [["Policy Number", "Net Premium", "Total Commission"], ["7061514", 28975.36
 new_list = [item[1] for item in li]
 
 print(new_list.__len__())
+
