@@ -158,5 +158,3 @@ for i in Main[1:]:
     if i[0] != "":
         if i[1] == new_total_premiums[ac_idx] and i[1] == new_Commissions[ac_idx]:
             same_list.append(ac_idx)
-
-print(new_main.__len__())
