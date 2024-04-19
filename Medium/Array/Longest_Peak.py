@@ -15,6 +15,39 @@ import unittest
 
 
 def longestPeak(array: list) -> int:
+    idx = 1
+    longestPeakNum = 0
+    currLongestPeak = 0
+    while idx <= len(array) - 2:
+        if array[idx - 1] < array[idx] < array[idx + 1]:
+            currLongestPeak += 1
+            idx += 1
+        elif array[idx] > array[idx - 1] and array[idx] > array[idx + 1]:
+            currLongestPeak += 2
+            idx += 1
+            for slopeIdx, slope in enumerate(array[idx:], start=idx):
+                if slope >= array[slopeIdx - 1]:
+                    idx = slopeIdx
+                    if currLongestPeak > longestPeakNum:
+                        longestPeakNum = currLongestPeak
+                        currLongestPeak = 0
+                        break
+                    currLongestPeak = 0
+                    break
+                elif slopeIdx == len(array) - 1:
+                    currLongestPeak += 1
+                    if currLongestPeak > longestPeakNum:
+                        longestPeakNum = currLongestPeak
+                        currLongestPeak = 0
+                else:
+                    currLongestPeak += 1
+        else:
+            idx += 1
+            currLongestPeak = 0
+    return longestPeakNum
+
+
+def longestPeak_2(array: list) -> int:
     longest_peak_length = 0
     i = 1
 
@@ -45,4 +78,9 @@ class TestProgram(unittest.TestCase):
     def test_case_1(self):
         array = [1, 2, 3, 3, 4, 0, 10, 6, 5, -1, -3, 2, 3]
         expected = 6
+        self.assertEqual(longestPeak(array), expected)
+
+    def test_case_2(self):
+        array = [1, 3, 2]
+        expected = 3
         self.assertEqual(longestPeak(array), expected)
