@@ -51,6 +51,7 @@ def longestPeak_2(array: list) -> int:
     longest_peak_length = 0
     i = 1
 
+    # Find the length of the longest peak in an array where a peak is defined as a sequence of strictly increasing integers followed by a sequence of strictly decreasing integers.
     while i < len(array) - 1:
         is_peak = array[i - 1] < array[i] and array[i] > array[i + 1]
 
@@ -80,6 +81,7 @@ class TestProgram(unittest.TestCase):
         expected = 6
         self.assertEqual(longestPeak(array), expected)
 
+    # A test case to check the longest peak function with an array and expected output.
     def test_case_2(self):
         array = [1, 3, 2]
         expected = 3
