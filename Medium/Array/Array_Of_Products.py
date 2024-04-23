@@ -42,6 +42,7 @@ def arrayOfProducts(array: list) -> list:
     for i in range(len(array) - 1, -1, -1):
         res[i] *= postfix
         postfix *= array[i]
+
     return res
 
 
