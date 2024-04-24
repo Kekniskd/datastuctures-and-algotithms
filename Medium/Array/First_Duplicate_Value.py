@@ -27,13 +27,23 @@ import unittest
 
 
 # Space compexity is O(n) we can do O(1)
-def firstDuplicateValue(array: list) -> int:
+def firstDuplicateValue_(array: list) -> int:
     # Write your code here.
     seen = set()
     for num in array:
         if num in seen:
             return num
         seen.add(num)
+    return -1
+
+
+def firstDuplicateValue(array: list) -> int:
+    # Write your code here.
+    for num in array:
+        abs_value = abs(num)
+        if array[abs_value - 1] < 0:
+            return num
+        array[abs_value - 1] *= -1
     return -1
 
 
