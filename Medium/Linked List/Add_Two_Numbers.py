@@ -1,7 +1,9 @@
 from typing import Optional
+from dataclasses import dataclass
 
 
 # Definition for singly-linked list.
+@dataclass
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
