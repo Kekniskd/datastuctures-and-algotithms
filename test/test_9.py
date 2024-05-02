@@ -53,6 +53,15 @@ def extract_month_and_year(path, only_month=False):
         except Exception as e:
             pass
             # logging.info(e)
+        try:
+            pattern = r'(\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b)(\d{4})'
+            match = re.search(pattern, word)
+
+            month = match.group(1)
+            year = match.group(2)
+        except Exception as e:
+            pass
+            # logging.info(e)
 
         try:
             match = re.match(r'(\d{4})(\d{2})(\d{2})', word)
@@ -117,5 +126,5 @@ def extract_month_and_year(path, only_month=False):
     return month, year
 
 
-path_ = "test 20.xlsx"
+path_ = "AXA Farm Estate Premium BDX - Jan2024.xlsx"
 print(extract_month_and_year(path_, only_month=False))
