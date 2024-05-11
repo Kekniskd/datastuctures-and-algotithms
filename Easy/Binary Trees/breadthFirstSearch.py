@@ -11,6 +11,8 @@ class TreeNode:
 
 
 def breadFirstSearch(root: Optional[TreeNode]) -> Optional[List]:
+    if root is None:
+        return []
     res = []
     queue = [root]
     while queue:
@@ -40,9 +42,14 @@ class TestProgram(unittest.TestCase):
         expected = ['a', 'b', 'c', 'd', 'e', 'f']
         actual = breadFirstSearch(a)
         self.assertEqual(actual, expected)
+        #      a
+        #    /   \
+        #   b     c
+        #  / \     \
+        # d   e     f
 
-#      a
-#    /   \
-#   b     c
-#  / \     \
-# d   e     f
+    def test_case_2(self):
+        a = None
+        expected = []
+        actual = breadFirstSearch(a)
+        self.assertEqual(actual, expected)
