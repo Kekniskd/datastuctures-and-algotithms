@@ -29,8 +29,3 @@ class TestProgram(unittest.TestCase):
         array = [5, 1, 22, 25, 6, -1, 8, 10]
         sequence = [1, 6, -1, 10]
         self.assertTrue(isValidSubsequence(array, sequence))
-
-
-if __name__ == '__main__':
-    test_case_1_obj = TestProgram()
-    test_case_1_obj.test_case_1()

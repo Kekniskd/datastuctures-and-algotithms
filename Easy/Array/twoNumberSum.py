@@ -14,16 +14,16 @@
 
 def twoNumberSum(array: list, targetSum: int) -> list:
     # Write your code here.
-    dic = []
+    dic = {}
     for num in array:
         if targetSum - num in dic:
             return [num, targetSum - num]
         else:
-            dic.append(num)
+            dic[num] = True
     return []
 
 
 ac_array = [3, 5, -4, 8, 11, 1, -1, 6]
-ac_targetSum = 8
+ac_targetSum = 17
 
 print(twoNumberSum(ac_array, ac_targetSum))

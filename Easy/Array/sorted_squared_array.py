@@ -17,7 +17,7 @@ def sortedSquaredArray(array: list) -> list:
             sqr_arr[out_idx] = array[l_idx] * array[l_idx]
             l_idx += 1
 
-        else:
+        elif array[l_idx] < array[r_idx]:
             sqr_arr[out_idx] = array[r_idx] * array[r_idx]
             r_idx -= 1
         out_idx -= 1
@@ -28,6 +28,12 @@ class TestProgram(unittest.TestCase):
     def test_case_1(self):
         input = [1, 2, 3, 5, 6, 8, 9]
         expected = [1, 4, 9, 25, 36, 64, 81]
+        actual = sortedSquaredArray(input)
+        self.assertEqual(actual, expected)
+
+    def test_case_2(self):
+        input = [1, 2]
+        expected = [1, 4]
         actual = sortedSquaredArray(input)
         self.assertEqual(actual, expected)
 

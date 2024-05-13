@@ -1,4 +1,4 @@
-def isUnique(input: str) -> str:
+def isUnique(input: str) -> dict:
     hMap = {}
 
     for letter in input:
