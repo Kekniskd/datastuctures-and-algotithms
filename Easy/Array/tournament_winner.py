@@ -27,30 +27,17 @@ import unittest
 
 
 def tournamentWinner(competitions: list, results: list) -> str:
-    # Write your code here.
-    winner = ''
-    points = {winner: 0}
-    for idx, comp in enumerate(competitions):
-        if results[idx] == 0:
-            if comp[1] not in points.keys():
-                points[comp[1]] = 3
-                if points[comp[1]] > points[winner]:
-                    winner = comp[1]
-            else:
-                points[comp[1]] = points[comp[1]] + 3
-                if points[comp[1]] > points[winner]:
-                    winner = comp[1]
+    currBest = ''
+    score = {currBest: 0}
 
-        elif results[idx] == 1:
-            if comp[0] not in points.keys():
-                points[comp[0]] = 3
-                if points[comp[0]] > points[winner]:
-                    winner = comp[0]
-            else:
-                points[comp[0]] = points[comp[0]] + 3
-                if points[comp[0]] > points[winner]:
-                    winner = comp[0]
-    return winner
+    for idx in range(len(competitions)):
+        winner = competitions[idx][0] if results[idx] == 1 else competitions[idx][1]
+        score[winner] = score.get(winner, 0) + 3
+
+        if score[currBest] < score[winner]:
+            currBest = winner
+
+    return currBest
 
 
 class TestProgram(unittest.TestCase):
@@ -74,8 +61,3 @@ class TestProgram(unittest.TestCase):
         expected = "C#"
         actual = tournamentWinner(competitions, results)
         self.assertEqual(actual, expected)
-
-
-if __name__ == '__main__':
-    test_case_1_obj = TestProgram()
-    test_case_1_obj.test_case_1()
