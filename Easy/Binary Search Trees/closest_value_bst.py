@@ -10,7 +10,29 @@ import unittest
 
 
 def findClosestValueInBst(tree, target):
-    # Write your code here.
+    currClosest = tree.value
+    curr = tree
+
+    while curr:
+        print(curr.value)
+        curr_diffrance = abs(target - curr.value)
+        closest_diffrance = abs(target - currClosest)
+
+        if curr_diffrance < closest_diffrance:
+            currClosest = curr.value
+
+        if target > curr.value:
+            curr = curr.right
+        elif target < curr.value:
+            curr = curr.left
+
+        else:
+            break
+
+    return currClosest
+
+
+def findClosestValueInBst(tree, target):
     return helper(tree, target, tree.value)
 
 
@@ -48,8 +70,3 @@ class TestProgram(unittest.TestCase):
         expected = 13
         actual = findClosestValueInBst(root, 12)
         self.assertEqual(expected, actual)
-
-
-if __name__ == '__main__':
-    test_case_1_obj = TestProgram()
-    test_case_1_obj.test_case_1()
