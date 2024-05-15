@@ -33,40 +33,56 @@ class BinaryTreeBase:
         self.right = None
 
 
-def branchSums_iterative(root):
-    sums = []
-    stack = [(root, 0)]
+# def branchSums_iterative(root):
+#     sums = []
+#     stack = [(root, 0)]
+#
+#     while stack:
+#         curr, runningSum = stack.pop()
+#         currSum = runningSum + curr.value
+#
+#         if curr.right is None and curr.left is None:
+#             sums.append(currSum)
+#         else:
+#             if curr.right is not None:
+#                 stack.append((curr.right, currSum))
+#             if curr.left is not None:
+#                 stack.append((curr.left, currSum))
+#
+#     return sums
 
-    while stack:
-        curr, runningSum = stack.pop()
-        currSum = runningSum + curr.value
 
-        if curr.right is None and curr.left is None:
-            sums.append(currSum)
-        else:
-            if curr.right is not None:
-                stack.append((curr.right, currSum))
-            if curr.left is not None:
-                stack.append((curr.left, currSum))
+# def branchSumsHelper(root: BinaryTreeBase, branch_sum: int, sum_array: list) -> Optional[list[Union[int, Any]]]:
+#     if root is None:
+#         return
+#
+#     branch_sum = branch_sum + root.value
+#     if root.left is None and root.right is None:
+#         sum_array.append(branch_sum)
+#
+#     branchSumsHelper(root.left, branch_sum, sum_array)
+#     branchSumsHelper(root.right, branch_sum, sum_array)
+#     return sum_array
+#
+#
+# def branchSums(root: BinaryTreeBase) -> Optional[list[Union[int, Any]]]:
+#     return branchSumsHelper(root, 0, [])
+
+
+def branchSums(root, runningSum=0, sums=[]):
+    # print(root.value, runningSum, sums)
+
+    if root.left is None and root.right is None:
+        sums.append(runningSum + root.value)
+        return sums
+
+    runningSum = root.value + runningSum
+    if root.left is not None:
+        sums + branchSums(root.left, runningSum, sums)
+    if root.right is not None:
+        sums + branchSums(root.right, runningSum, sums)
 
     return sums
-
-
-def branchSumsHelper(root: BinaryTreeBase, branch_sum: int, sum_array: list) -> Optional[list[Union[int, Any]]]:
-    if root is None:
-        return
-
-    branch_sum = branch_sum + root.value
-    if root.left is None and root.right is None:
-        sum_array.append(branch_sum)
-
-    branchSumsHelper(root.left, branch_sum, sum_array)
-    branchSumsHelper(root.right, branch_sum, sum_array)
-    return sum_array
-
-
-def branchSums(root: BinaryTreeBase) -> Optional[list[Union[int, Any]]]:
-    return branchSumsHelper(root, 0, [])
 
 
 class TestProgram(unittest.TestCase):
