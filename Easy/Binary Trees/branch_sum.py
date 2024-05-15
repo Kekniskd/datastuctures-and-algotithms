@@ -33,6 +33,25 @@ class BinaryTreeBase:
         self.right = None
 
 
+def branchSums_iterative(root):
+    sums = []
+    stack = [(root, 0)]
+
+    while stack:
+        curr, runningSum = stack.pop()
+        currSum = runningSum + curr.value
+
+        if curr.right is None and curr.left is None:
+            sums.append(currSum)
+        else:
+            if curr.right is not None:
+                stack.append((curr.right, currSum))
+            if curr.left is not None:
+                stack.append((curr.left, currSum))
+
+    return sums
+
+
 def branchSumsHelper(root: BinaryTreeBase, branch_sum: int, sum_array: list) -> Optional[list[Union[int, Any]]]:
     if root is None:
         return
