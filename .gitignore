@@ -1,1 +1,12 @@
 *.xlsx
+__pycache__/
+
+# uv / virtualenv
+.venv/
+
+# Editor-local state
+.obsidian/
+.idea/
+
+# Personal documents - keep off a public repo
+Roadmap/*.pdf

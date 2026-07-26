@@ -1,0 +1,24 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+
+  // The terminal profile below activates the venv itself, so the extensions'
+  // own auto-activation is turned off to avoid activating twice.
+  "python.terminal.activateEnvironment": false,
+  "python-envs.terminal.autoActivationType": "off",
+
+  "terminal.integrated.profiles.windows": {
+    "PowerShell (.venv)": {
+      "source": "PowerShell",
+      "args": [
+        "-NoExit",
+        "-NoLogo",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-Command",
+        ". '${workspaceFolder}\\.venv\\Scripts\\Activate.ps1'"
+      ],
+      "icon": "snake"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell (.venv)"
+}
