@@ -24,7 +24,7 @@
 
 ## Phase gates
 
-- [ ] **Gate 1 (W4, ~23 Aug 2026)** — 60 problems; URL→render walkthrough from memory; JWT vs session tradeoffs in 3 min; auction SQL query from scratch
+- [ ] **Gate 1 (W4, ~23 Aug 2026)** — 60 problems; URL→ render walkthrough from memory; JWT vs session tradeoffs in 3 min; auction SQL query from scratch
 - [ ] **Gate 2 (W10, ~4 Oct 2026)** — 150 problems; unseen Medium ≤25 min at 70%; 3 LLD builds with tests; every SQL pattern solved with *and* without window functions
 - [ ] **Gate 3 (W16, ~15 Nov 2026)** — 200+ problems; 5 design problems end-to-end; RAG project shipped; applications sent
 - [ ] **Gate 4 (W20, ~13 Dec 2026)** — 12 mocks with feedback; 250 problems; story bank timed; no-autocomplete practice standard

@@ -50,34 +50,34 @@ Python-specific interview hazards: mutable default arguments; recursion depth ~1
 
 Target ~250 problems. Distribution: 20% Easy, 55% Medium, 25% Hard. The unit of learning is the **pattern**, not the problem.
 
-| # | Pattern | Count | Signature triggers | Canonical problems |
-|---|---|---|---|---|
-| 1 | Two pointers | 12 | Sorted array, pair/triplet, in-place partition | 3Sum, Container With Most Water, Trapping Rain Water, Sort Colors |
-| 2 | Sliding window | 12 | "longest/shortest substring/subarray with…" | Longest Substring w/o Repeat, Min Window Substring, Max Sliding Window |
-| 3 | Prefix sum / difference array | 8 | Range sums, subarray count, "divisible by k" | Subarray Sum Equals K, Product of Array Except Self, Range Sum 2D |
-| 4 | Hashing | 12 | Count, group, dedup, complement lookup | Group Anagrams, Two Sum, Longest Consecutive Sequence |
-| 5 | Binary search (array) | 8 | Sorted, rotated, boundary | Search Rotated, Find First/Last, Median of Two Sorted Arrays |
-| 6 | **Binary search on the answer** | 8 | "minimum maximum X", monotone feasibility | Koko Eating Bananas, Split Array Largest Sum, Capacity to Ship |
-| 7 | Sorting + greedy | 10 | Intervals, scheduling, exchange argument | Merge Intervals, Meeting Rooms II, Non-overlapping Intervals, Task Scheduler |
-| 8 | Linked list | 10 | In-place pointer surgery | Reverse in k-Groups, Cycle II, Merge k Sorted, Copy w/ Random Pointer |
-| 9 | Stack / monotonic stack | 10 | "next greater", nesting, parsing | Daily Temperatures, Largest Rectangle in Histogram, Valid Parentheses, Basic Calculator |
-| 10 | Heap / top-K / two heaps | 10 | K-th, streaming median, merge k | Kth Largest, Find Median from Data Stream, Merge k Lists, Top K Frequent |
-| 11 | Trees — traversal & recursion | 16 | Any binary tree | Level Order, Diameter, LCA, Serialize/Deserialize, Validate BST, Right Side View |
-| 12 | Trie | 6 | Prefix, word dictionary, autocomplete | Implement Trie, Word Search II, Design Add/Search Words |
-| 13 | Graphs — BFS/DFS/grid | 14 | Grid, islands, shortest unweighted path | Number of Islands, Rotting Oranges, Word Ladder, Clone Graph, Pacific Atlantic |
-| 14 | Topological sort | 6 | Dependencies, ordering, cycle in DAG | Course Schedule I/II, Alien Dictionary |
-| 15 | Union-Find (DSU) | 8 | Connectivity, merging groups, cycle in undirected | Redundant Connection, Accounts Merge, Number of Provinces, Kruskal MST |
-| 16 | Shortest path (Dijkstra / Bellman-Ford / 0-1 BFS) | 6 | Weighted graph, "cheapest", "min effort" | Network Delay Time, Cheapest Flights K Stops, Path With Minimum Effort |
-| 17 | Backtracking | 12 | Enumerate all, permutations/combinations, constraints | Subsets, Permutations, N-Queens, Word Search, Sudoku, Combination Sum |
-| 18 | DP 1D | 12 | Choice per index, "ways to", "max profit" | Climbing Stairs, House Robber, Coin Change, Word Break, LIS, Decode Ways |
-| 19 | DP 2D / grid / strings | 14 | Two sequences, grid paths | Edit Distance, LCS, Unique Paths, Regex Matching, Interleaving String |
-| 20 | DP on intervals / trees / bitmask `[stretch]` | 8 | Merge ranges, tree subproblems, subset state | Burst Balloons, Binary Tree Cameras, TSP-style |
-| 21 | Bit manipulation | 6 | XOR tricks, masks, counting bits | Single Number I/II/III, Counting Bits, Subsets via masks |
-| 22 | Math / number theory | 6 | Primes, GCD, overflow, base conversion | Sieve, Pow(x,n), Excel Column, Happy Number |
-| 23 | Design / data-structure build | 10 | "Design a X that supports Y in O(1)" | LRU Cache, LFU Cache, Insert Delete GetRandom, Design Twitter, Rate Limiter, Snapshot Array |
-| 24 | String matching | 4 | Pattern search, rolling hash | Implement strStr (KMP), Repeated Substring, Rabin–Karp |
-| 25 | Segment tree / BIT `[stretch]` | 4 | Range query + point update | Range Sum Mutable, Count of Smaller After Self |
-| 26 | Sampling / reservoir / randomized `[stretch]` | 3 | Streams, unknown length, quickselect | Random Pick with Weight, Kth Largest via quickselect, Linked List Random Node |
+| #   | Pattern                                           | Count | Signature triggers                                    | Canonical problems                                                                          |
+| --- | ------------------------------------------------- | ----- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| 1   | Two pointers                                      | 12    | Sorted array, pair/triplet, in-place partition        | 3Sum, Container With Most Water, Trapping Rain Water, Sort Colors                           |
+| 2   | Sliding window                                    | 12    | "longest/shortest substring/subarray with…"           | Longest Substring w/o Repeat, Min Window Substring, Max Sliding Window                      |
+| 3   | Prefix sum / difference array                     | 8     | Range sums, subarray count, "divisible by k"          | Subarray Sum Equals K, Product of Array Except Self, Range Sum 2D                           |
+| 4   | Hashing                                           | 12    | Count, group, dedup, complement lookup                | Group Anagrams, Two Sum, Longest Consecutive Sequence                                       |
+| 5   | Binary search (array)                             | 8     | Sorted, rotated, boundary                             | Search Rotated, Find First/Last, Median of Two Sorted Arrays                                |
+| 6   | **Binary search on the answer**                   | 8     | "minimum maximum X", monotone feasibility             | Koko Eating Bananas, Split Array Largest Sum, Capacity to Ship                              |
+| 7   | Sorting + greedy                                  | 10    | Intervals, scheduling, exchange argument              | Merge Intervals, Meeting Rooms II, Non-overlapping Intervals, Task Scheduler                |
+| 8   | Linked list                                       | 10    | In-place pointer surgery                              | Reverse in k-Groups, Cycle II, Merge k Sorted, Copy w/ Random Pointer                       |
+| 9   | Stack / monotonic stack                           | 10    | "next greater", nesting, parsing                      | Daily Temperatures, Largest Rectangle in Histogram, Valid Parentheses, Basic Calculator     |
+| 10  | Heap / top-K / two heaps                          | 10    | K-th, streaming median, merge k                       | Kth Largest, Find Median from Data Stream, Merge k Lists, Top K Frequent                    |
+| 11  | Trees — traversal & recursion                     | 16    | Any binary tree                                       | Level Order, Diameter, LCA, Serialize/Deserialize, Validate BST, Right Side View            |
+| 12  | Trie                                              | 6     | Prefix, word dictionary, autocomplete                 | Implement Trie, Word Search II, Design Add/Search Words                                     |
+| 13  | Graphs — BFS/DFS/grid                             | 14    | Grid, islands, shortest unweighted path               | Number of Islands, Rotting Oranges, Word Ladder, Clone Graph, Pacific Atlantic              |
+| 14  | Topological sort                                  | 6     | Dependencies, ordering, cycle in DAG                  | Course Schedule I/II, Alien Dictionary                                                      |
+| 15  | Union-Find (DSU)                                  | 8     | Connectivity, merging groups, cycle in undirected     | Redundant Connection, Accounts Merge, Number of Provinces, Kruskal MST                      |
+| 16  | Shortest path (Dijkstra / Bellman-Ford / 0-1 BFS) | 6     | Weighted graph, "cheapest", "min effort"              | Network Delay Time, Cheapest Flights K Stops, Path With Minimum Effort                      |
+| 17  | Backtracking                                      | 12    | Enumerate all, permutations/combinations, constraints | Subsets, Permutations, N-Queens, Word Search, Sudoku, Combination Sum                       |
+| 18  | DP 1D                                             | 12    | Choice per index, "ways to", "max profit"             | Climbing Stairs, House Robber, Coin Change, Word Break, LIS, Decode Ways                    |
+| 19  | DP 2D / grid / strings                            | 14    | Two sequences, grid paths                             | Edit Distance, LCS, Unique Paths, Regex Matching, Interleaving String                       |
+| 20  | DP on intervals / trees / bitmask `[stretch]`     | 8     | Merge ranges, tree subproblems, subset state          | Burst Balloons, Binary Tree Cameras, TSP-style                                              |
+| 21  | Bit manipulation                                  | 6     | XOR tricks, masks, counting bits                      | Single Number I/II/III, Counting Bits, Subsets via masks                                    |
+| 22  | Math / number theory                              | 6     | Primes, GCD, overflow, base conversion                | Sieve, Pow(x,n), Excel Column, Happy Number                                                 |
+| 23  | Design / data-structure build                     | 10    | "Design a X that supports Y in O(1)"                  | LRU Cache, LFU Cache, Insert Delete GetRandom, Design Twitter, Rate Limiter, Snapshot Array |
+| 24  | String matching                                   | 4     | Pattern search, rolling hash                          | Implement strStr (KMP), Repeated Substring, Rabin–Karp                                      |
+| 25  | Segment tree / BIT `[stretch]`                    | 4     | Range query + point update                            | Range Sum Mutable, Count of Smaller After Self                                              |
+| 26  | Sampling / reservoir / randomized `[stretch]`     | 3     | Streams, unknown length, quickselect                  | Random Pick with Weight, Kth Largest via quickselect, Linked List Random Node               |
 
 **Google flavour note:** Google leans toward graphs, grids/matrix simulation, string parsing, binary search on answer, and "design a data structure with these invariants". It leans *away* from long chains of obscure DP compared to Meta/Amazon. Weight accordingly — but DP is still ~15% of what you'll see.
 

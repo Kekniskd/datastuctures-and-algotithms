@@ -18,3 +18,4 @@ class TestProgram(unittest.TestCase):
         expected = False
         actual = isUnique(input)
         self.assertEqual(actual, expected)
+        

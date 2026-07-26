@@ -23,18 +23,18 @@ Stated assumptions (adjust and the plan still holds):
 
 ## 1. Topic map
 
-| # | Track | File | Hours | Why it matters at Google |
-|---|---|---|---|---|
-| 1 | DSA | [[01-dsa]] | 180 | 2–4 rounds of your loop. Non-negotiable gate. |
-| 2 | HTTP + Internet fundamentals | [[02-http-and-internet]] | 35 | Feeds design rounds; asked directly in phone screens |
-| 3 | LLD / OOD / concurrency | [[03-lld]] | 45 | "Design this class hierarchy", code-quality signal in coding rounds |
-| 4 | HLD / distributed systems / queues / DB | [[04-hld]] | 70 | L5 gate; L4 differentiator. Google *wrote* these papers |
-| 4b | **SQL** | [[10-sql]] | 30 | Screens ask it directly (see [Adhoc/hackerrank_questions.md](../Adhoc/hackerrank_questions.md) Q3); underpins the DB half of HLD |
-| 5 | AI/ML basics | [[05-ai-ml-basics]] | 45 | ML-adjacent teams, ML systems design round |
-| 6 | LLM / transformers / GenAI / LangChain | [[06-llm-genai]] | 55 | Resume magnet; almost every 2026 team touches this |
-| 7 | Google interview playbook | [[07-google-interview-playbook]] | 30 | Process, Googlyness, story bank, referrals, negotiation |
-| 8 | Supporting skills (my additions) | [[08-supporting-skills]] | 40 | OS, networking, Python mastery, git, Docker/K8s, writing |
-| — | Tracker | [[09-progress-tracker]] | — | Where you actually log the work |
+| #   | Track                                   | File                             | Hours | Why it matters at Google                                                                                                         |
+| --- | --------------------------------------- | -------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | DSA                                     | [[01-dsa]]                       | 180   | 2–4 rounds of your loop. Non-negotiable gate.                                                                                    |
+| 2   | HTTP + Internet fundamentals            | [[02-http-and-internet]]         | 35    | Feeds design rounds; asked directly in phone screens                                                                             |
+| 3   | LLD / OOD / concurrency                 | [[03-lld]]                       | 45    | "Design this class hierarchy", code-quality signal in coding rounds                                                              |
+| 4   | HLD / distributed systems / queues / DB | [[04-hld]]                       | 70    | L5 gate; L4 differentiator. Google *wrote* these papers                                                                          |
+| 4b  | **SQL**                                 | [[10-sql]]                       | 30    | Screens ask it directly (see [Adhoc/hackerrank_questions.md](../Adhoc/hackerrank_questions.md) Q3); underpins the DB half of HLD |
+| 5   | AI/ML basics                            | [[05-ai-ml-basics]]              | 45    | ML-adjacent teams, ML systems design round                                                                                       |
+| 6   | LLM / transformers / GenAI / LangChain  | [[06-llm-genai]]                 | 55    | Resume magnet; almost every 2026 team touches this                                                                               |
+| 7   | Google interview playbook               | [[07-google-interview-playbook]] | 30    | Process, Googlyness, story bank, referrals, negotiation                                                                          |
+| 8   | Supporting skills (my additions)        | [[08-supporting-skills]]         | 40    | OS, networking, Python mastery, git, Docker/K8s, writing                                                                         |
+| —   | Tracker                                 | [[09-progress-tracker]]          | —     | Where you actually log the work                                                                                                  |
 
 Total ≈ 530 hrs ≈ 24 weeks × ~22 hrs. That is above 14 hrs/week — so the plan below **prunes deliberately**: items marked `[stretch]` are cut first.
 
@@ -111,12 +111,12 @@ If it doesn't: Google's cooldown is typically ~6–12 months. Use the debriefs t
 
 ## 3. Weekly cadence (the actual machine)
 
-| Day | Block | Content |
-|---|---|---|
-| Mon–Fri | 45 min AM | 2 problems: 1 new, 1 spaced-repetition re-solve |
+| Day     | Block     | Content                                                                               |
+| ------- | --------- | ------------------------------------------------------------------------------------- |
+| Mon–Fri | 45 min AM | 2 problems: 1 new, 1 spaced-repetition re-solve                                       |
 | Mon–Fri | 60 min PM | Track of the week (systems / AI / LLD) — read, then **write notes in your own words** |
-| Sat | 3 hrs | 1 timed 45-min mock-style coding sitting + 1 design problem written out |
-| Sun | 2 hrs | Review: update [[09-progress-tracker]], re-solve failures, plan next week |
+| Sat     | 3 hrs     | 1 timed 45-min mock-style coding sitting + 1 design problem written out               |
+| Sun     | 2 hrs     | Review: update [[09-progress-tracker]], re-solve failures, plan next week             |
 
 Rules that do the heavy lifting:
 1. **20-minute rule.** Stuck 20 min on a new problem → read the solution, understand it fully, then re-implement from blank. Never grind 2 hrs.
