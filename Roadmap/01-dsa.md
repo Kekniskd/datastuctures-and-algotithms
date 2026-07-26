@@ -28,17 +28,17 @@ Google-specific mechanics:
 
 Know these cold, because "what's the complexity of your own line of code" is a real failure mode:
 
-| Operation | Complexity | Trap |
-|---|---|---|
-| `list.append` / `pop()` | O(1) amortized | `pop(0)` is O(n) → use `collections.deque` |
-| `list.insert(0, x)` | O(n) | Same |
-| `x in list` | O(n) | `x in set` is O(1) — interviewers watch for this |
-| `dict` / `set` ops | O(1) average | Worst case O(n); mention it if asked |
-| `sorted()` / `list.sort()` | O(n log n) | Timsort, stable, O(n) space for `sorted` |
-| `heapq` push/pop | O(log n) | Min-heap only — negate for max-heap |
-| String concatenation in loop | O(n²) | Use `''.join(parts)` |
-| Slicing `a[i:j]` | O(j−i) time and space | Hidden cost inside loops |
-| `str`/`tuple` immutability | — | Enables use as dict keys / memo keys |
+| Operation                    | Complexity            | Trap                                             |
+| ---------------------------- | --------------------- | ------------------------------------------------ |
+| `list.append` / `pop()`      | O(1) amortized        | `pop(0)` is O(n) → use `collections.deque`       |
+| `list.insert(0, x)`          | O(n)                  | Same                                             |
+| `x in list`                  | O(n)                  | `x in set` is O(1) — interviewers watch for this |
+| `dict` / `set` ops           | O(1) average          | Worst case O(n); mention it if asked             |
+| `sorted()` / `list.sort()`   | O(n log n)            | Timsort, stable, O(n) space for `sorted`         |
+| `heapq` push/pop             | O(log n)              | Min-heap only — negate for max-heap              |
+| String concatenation in loop | O(n²)                 | Use `''.join(parts)`                             |
+| Slicing `a[i:j]`             | O(j−i) time and space | Hidden cost inside loops                         |
+| `str`/`tuple` immutability   | —                     | Enables use as dict keys / memo keys             |
 
 Must-know stdlib: `collections` (`deque`, `defaultdict`, `Counter`, `OrderedDict`), `heapq` (incl. `nlargest`, `heapify`), `bisect` (`bisect_left/right` — a huge time-saver), `functools.lru_cache`, `itertools`, `math.inf`, `sys.setrecursionlimit`.
 
